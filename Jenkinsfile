@@ -8,5 +8,14 @@ pipeline {
                sh './mvnw package'
             }
         }
+        stage('Test'){
+            sh './mvnw test'
+        }
+
+        post{
+            always{
+                junit '**/target/surefire-reports/TEST-*.xml'
+            }
+        }
     }
 }
