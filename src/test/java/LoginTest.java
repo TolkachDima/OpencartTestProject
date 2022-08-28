@@ -15,22 +15,17 @@ public class LoginTest {
         Actions actions = new Actions(driver);
 
         try {
+            driver.get("https://google.com");
 
-
-            driver.get("http://localhost/OpenCart/");
-
-            Thread.sleep(500);
-
-            driver.manage().window().maximize();
-
-
-            driver.findElement(By.linkText("My Account")).click();
-            driver.findElement(By.linkText("Login")).click();
-            driver.findElement(By.id("input-email")).sendKeys("email@email.com");
-            driver.findElement(By.id("input-password")).sendKeys("password");
+//            driver.get("http://localhost/OpenCart/");
+//            Thread.sleep(500);
+//            driver.manage().window().maximize();
+//            driver.findElement(By.linkText("My Account")).click();
 //            driver.findElement(By.linkText("Login")).click();
-            driver.findElement(By.xpath("//*[@id=\"form-login\"]/button")).click();
-
+//            driver.findElement(By.id("input-email")).sendKeys("email@email.com");
+//            driver.findElement(By.id("input-password")).sendKeys("password");
+////            driver.findElement(By.linkText("Login")).click();
+//            driver.findElement(By.xpath("//*[@id=\"form-login\"]/button")).click();
             Thread.sleep(10000);
         }catch (Exception e){
             System.out.println(e);
